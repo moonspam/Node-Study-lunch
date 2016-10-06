@@ -9,7 +9,7 @@ router.get("/", function(req, res, next) {
     fs.createReadStream("./csv/store.csv").pipe(converter);
 
     converter.on("end_parsed", function (jsonArray) {
-        console.log(jsonArray);
+        // console.log(jsonArray);
         var storeAll = jsonArray;
         var storeResult = storeAll[Math.floor(Math.random() * storeAll.length)];
         return res.render("home", {storeAll: storeAll, storeResult: storeResult});
