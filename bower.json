@@ -21,5 +21,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "install": {
+    "path": {
+      "css": "public/css",
+      "js": "public/js"
+    }
+  }
 }
