@@ -1,0 +1,25 @@
+{
+  "name": "lunch",
+  "description": "What should i eat for lunch",
+  "main": "app.js",
+  "authors": [
+    "moonspam"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "lunch",
+    "node",
+    "pug",
+    "application",
+    "csv",
+    "study"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
