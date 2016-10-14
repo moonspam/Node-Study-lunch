@@ -12,7 +12,14 @@ router.get("/", function(req, res, next) {
         // console.log(jsonArray);
         var storeAll = jsonArray;
         var storeResult = storeAll[Math.floor(Math.random() * storeAll.length)];
-        return res.render("home", {storeAll: storeAll, storeResult: storeResult});
+        return res.render("home", {
+            title: '점심 뭐 먹지?',
+            description: '오늘 점심 뭐 먹지 고민하는 분들을 위한 점심밥집 추천 사이트',
+            keywords: ['점심', '밥집', '추천', '맛집', '오늘 점심 뭐 먹지'],
+            url: req.headers.host,
+            storeAll: storeAll,
+            storeResult: storeResult
+        });
     });
 });
 

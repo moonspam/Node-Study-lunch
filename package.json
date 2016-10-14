@@ -19,7 +19,9 @@
   "dependencies": {
     "csvtojson": "^1.0.2",
     "express": "^4.14.0",
-    "pug": "^2.0.0-beta6"
+    "morgan": "^1.7.0",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"
