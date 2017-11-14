@@ -2,8 +2,14 @@
 var express = require("express");
 var router = express.Router();
 
-router.get("/", function(req, res, next) {
-    storeResult = storeAll[Math.floor(Math.random() * storeAll.length)];
+router.get("/:id", function(req, res, next) {
+    var id = req.params.id;
+    var store;
+    for(store in storeAll) {
+        if(id === storeAll[store].name) {
+            storeResult = storeAll[store];
+        }
+    }
     // console.log(storeResult);
     res.render("home", {
         url: req.headers.host,

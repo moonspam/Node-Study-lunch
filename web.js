@@ -6,7 +6,11 @@ var morgan = require("morgan");
 
 var app = express();
 
+var storeAll,
+    storeResult;
+var readcsv = require("./middlewares/readcsv");
 var homeRouter = require("./routes/home");
+var storeRouter = require("./routes/store");
 
 // pug Setting
 app.set("view engine", "pug");
@@ -19,6 +23,7 @@ app.use(morgan("combined")); // combined or dev
 
 // Router
 app.use("/", homeRouter);
+app.use("/store", storeRouter);
 
 var port = process.env.PORT || 8001; // cafe24 port 8001
 

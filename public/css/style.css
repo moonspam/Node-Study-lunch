@@ -10,5 +10,6 @@ img, a img{padding:0 5px}
 .bg_img{position:fixed;left:0;top:0;width:100%;height:100%;background:url(../img/bg.jpg) center center no-repeat fixed #000000;background-size:cover;-webkit-filter:blur(5px);-moz-filter:blur(5px);-o-filter:blur(5px);-ms-filter:blur(5px);filter:blur(5px);z-index:0}
 .copyright{position:absolute;bottom:0;width:100%;padding:10px 0;text-align:center;z-index:2}
 .store_tags{padding:60px 10px 20px;text-align:justify;font-weight:lighter;font-size:12px;opacity:0.8;filter:alpha(opacity=80)}
+.store_tags a{text-decoration:none;color:#fff}
 .store_tags span:before{content:"/ "}
 .store_tags span:first-child:before{content:""}

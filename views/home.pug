@@ -14,7 +14,8 @@ block content
             img(src="/static/svg/refresh.svg" width="32" height="32" alt="새로고침")
         p(class="store_tags")
             each store in storeAll
-                span #{store.name} 
+                span
+                    a(href="/store/"+store.name+"") #{store.name} 
     div.copyright Curated by moonspam
     div.bg_black
     div.bg_img
