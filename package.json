@@ -4,6 +4,7 @@
   "description": "What should i eat for lunch",
   "main": "web.js",
   "scripts": {
+    "start": "node web.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
