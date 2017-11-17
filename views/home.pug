@@ -3,19 +3,16 @@ extends ./layout
 block content
     div(class="box")
         h1 <small>문슐랭 가이드</small><br>점심 뭐 먹지?
-        h1(class="answer") [#{storeResult.name}]
-        if(storeResult.map != "NULL")
-            a(href=storeResult.map, target="_blank")
-                img(src="/static/svg/location.svg" width="32" height="32" alt="약도보기")
-        if(storeResult.tel != "NULL")
-            a(href="tel:" + storeResult.tel, target="_blank")
-                img(src="/static/svg/phone.svg" width="32" height="32" alt="전화번호")
+        h1(class="answer")
+            a(href="https://store.naver.com/restaurants/detail?id="+storeResult.info, target="_blank") [#{storeResult.name}]
+        if(storeResult.info != "NULL")
+            a(href="https://store.naver.com/restaurants/detail?id="+storeResult.info, target="_blank")
+                img(src="/static/svg/info.svg" width="32" height="32" alt="정보보기")
         a(href="/" target="_self")
             img(src="/static/svg/refresh.svg" width="32" height="32" alt="새로고침")
         p(class="store_tags")
             each store in storeAll
                 span
                     a(href="/store/"+store.name+"") #{store.name} 
-    div.copyright Curated by moonspam
-    div.bg_black
-    div.bg_img
+        div.copyright Curated by moonspam
+    div.dimmed
